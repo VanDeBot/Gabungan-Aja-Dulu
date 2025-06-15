@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garingin Aja Dulu</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .joke-box {
+      margin-top: 30px;
+      font-size: 1.2rem;
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Garingin Aja Dulu 😂</h1>
+  <div>
+    <button onclick="showJoke('bapak_bapak')">Jokes Bapak-Bapak</button>
+    <button onclick="showJoke('gen_z')">Jokes Gen Z</button>
+    <button onclick="showJoke('gen_alpha')">Jokes Gen Alpha</button>
+  </div>
+  <div class="joke-box" id="jokeBox">Klik tombol di atas buat dapet jokes!</div>  <script>
+    const jokes = {
+      "bapak_bapak": [
+        "Pintu kalau diketok jawabannya apa? Ketok balik dong, biar sopan.",
+        "Kenapa tukang bakso gak pernah diet? Karena udah kenyang sama kenyataan.",
+        "Istri: 'Bang AC-nya rusak' — Suami: 'Gak apa, kita kan tetap adem berdua 😎'",
+        "Kenapa kalender gak pernah stres? Karena dia selalu punya tanggal merah.",
+        "Kaki meja kalau patah, bisa klaim BPJS gak ya?"
+      ],
+      "gen_z": [
+        "Gue: *pura-pura kuat* — Dompet: 'yhaa elah bang...' 😭",
+        "Mie instan: 3 menit — Masak air: 5 menit — Mikirin hidup: seharian",
+        "Pacar orang emang lebih menarik, soalnya effort-nya bukan dari kita 😔",
+        "Nggak insecure, cuma pengen jadi kucing yang kerjaannya rebahan digendong terus.",
+        "Lagi serius nugas, tiba-tiba ngeliat diri sendiri di bayangan laptop: 'wow, gitu banget ya'"
+      ],
+      "gen_alpha": [
+        "Eh guys, kalo ayam di Minecraft minum kopi jadi Ayam Kopi Right?",
+        "Bocil sekarang bukan main layangan, tapi main 'main Roblox bareng pacar' 😭",
+        "Kenapa dinosaurus punah? Karena gak punya akun TikTok.",
+        "Gue lagi ngambek, tapi cuma bisa ekspresiin lewat skin Mobile Legends.",
+        "Coklat SilverQueen? Aku maunya SilverKing. Karena aku cowok 😎💀"
+      ]
+    };
+
+    function showJoke(category) {
+      const selected = jokes[category];
+      const randomIndex = Math.floor(Math.random() * selected.length);
+      document.getElementById("jokeBox").textContent = selected[randomIndex];
+    }
+  </script></body>
+</html>
